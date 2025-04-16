@@ -1,0 +1,494 @@
+/* General Styles */
+.chat-messages {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Base Message Styles */
+.message {
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  max-width: 70%;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Sent Chat (User) - Blue Box and Black Text */
+.message.user {
+  background-color: #daf4cb !important; /* Light blue background */
+  color: #000000 !important;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+  border: 1px solid #bbdefb;
+}
+
+/* AI Chat - Green Box and Black Text */
+.message.ai {
+  background-color: #e8f5e9; /* Light green background */
+  color: #000000;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+  border: 1px solid #c8e6c9;
+}
+
+/* AI Message Typography */
+.message.ai h1,
+.message.ai h2,
+.message.ai h3 {
+  color: #000000;
+  margin: 1em 0 0.5em 0;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.3em;
+}
+
+.message.ai h1 {
+  font-size: 1.5em;
+}
+
+.message.ai h2 {
+  font-size: 1.3em;
+}
+
+.message.ai h3 {
+  font-size: 1.1em;
+}
+
+/* AI Message Lists */
+.message.ai ul,
+.message.ai ol {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+.message.ai li {
+  margin: 0.25em 0;
+  color: #000000;
+}
+
+/* AI Message Links */
+.message.ai a {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.message.ai a:hover {
+  text-decoration: underline;
+}
+
+/* Code Blocks in AI Messages */
+.message.ai pre {
+  background-color: #f5f5f5;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 0.5em 0;
+}
+
+.message.ai code {
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.9em;
+}
+
+/* Chat Input Area */
+.chat-input-area {
+  padding: 1rem;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.chat-input {
+  flex: 1;
+  min-height: 40px;
+  max-height: 120px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+
+.send-button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-button:hover {
+  background-color: #1976d2;
+}
+
+.send-button.disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+/* Loading State */
+.send-button.disabled .send-icon {
+  opacity: 0.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .message {
+    max-width: 85%;
+  }
+  
+  .chat-input-area {
+    padding: 0.75rem;
+  }
+  
+  .send-button {
+    padding: 0.5rem;
+  }
+}
+
+/* Body Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0fff4 0%, #e6ffee 100%);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  background-color: white;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 25px -5px rgba(40, 167, 69, 0.3);
+  color: white;
+}
+
+.welcome-content h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+}
+
+.welcome-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Section Title */
+.materials-section .section-title {
+  font-size: 1.75rem;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+/* Materials Grid */
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+/* Material Card */
+.material-card {
+  background: #fff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(40, 167, 69, 0.1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(40, 167, 69, 0.08);
+  height: 25em;
+  position: relative;
+}
+
+/* Hover Effect for Material Card */
+.material-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #28a745, #20c997);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.material-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 8px 30px rgba(40, 167, 69, 0.2);
+}
+
+.material-card:hover::before {
+  transform: scaleX(1);
+}
+
+.material-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.material-header {
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(40, 167, 69, 0.1);
+}
+
+.material-header h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.material-date,
+.teacher-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #003403;
+}
+
+.teacher-info {
+  padding: 0.5rem 0;
+}
+
+/* File Items */
+.files-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem;
+  background: rgba(40, 167, 70, 0.137);
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.file-item:hover {
+  background: rgba(40, 167, 69, 0.08);
+  border-color: rgba(40, 167, 69, 0.1);
+}
+
+.file-details {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.file-icon {
+  color: #01290a;
+  font-size: 1.1rem;
+}
+
+.file-name {
+  font-size: 0.9rem;
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.download-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #57a96a 0%, #56bd9e 100%);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.download-btn:hover {
+  background: linear-gradient(135deg, #1ea83e 0%, #18c490 100%);
+}
+
+.more-files-btn {
+  text-align: center;
+  padding: 0.75rem;
+  background: rgba(40, 167, 69, 0.04);
+  border: 1px solid rgba(40, 167, 69, 0.1);
+  border-radius: 0.75rem;
+  color: #28a745;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.more-files-btn:hover {
+  background: rgba(40, 167, 69, 0.08);
+  border-color: rgba(40, 167, 69, 0.2);
+}
+
+/* Empty State */
+.no-materials {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  text-align: center;
+  color: #28a745;
+}
+
+.empty-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.no-materials p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.no-materials span {
+  font-size: 0.9rem;
+  color: #0d3e03;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0fff4 0%, #e6ffee 100%);
+}
+
+.loading-spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 4px solid #e5e7eb;
+  border-top: 4px solid #28a745;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Utility Classes */
+.inline-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  vertical-align: middle;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  .welcome-banner {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .welcome-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .materials-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .material-card {
+    border-radius: 1rem;
+  }
+
+  .download-btn {
+    opacity: 1;
+    transform: none;
+  }
+}
